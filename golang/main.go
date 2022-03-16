@@ -8,26 +8,62 @@ import (
 )
 
 func main() {
-	size := int64(10)
-	// size := int64(1_000)
-	// size := int64(100_000)
-	// size := int64(1_000_000)
+	logs := true
+	total_logs := false
+	max := int64(10)
+	// max := int64(100)
+	// max := int64(1_000)
+	// max := int64(10_000)
+	// max := int64(100_000)
+	// max := int64(1_000_000)
 
-	array := utils.GenerateRandomInt64Array(size)
+	for size := int64(1); size <= max; size++ {
+		fmt.Printf("size: %v\n", size)
+		sort(size, logs, total_logs)
+		separator()
+	}
+}
 
-	// fmt.Println(array)
-	fmt.Println(array[0])
+func sort(size int64, logs bool, total_logs bool) {
+	array1 := utils.GenerateRandomInt64Array(size)
+	array2 := make([]int64, size)
+	copy(array2, array1)
 
-	start := time.Now()
+	if logs {
+		if total_logs {
+			fmt.Println(array1)
+			fmt.Println(array2)
+		}
+	}
 
-	selectionSort := monothread_sort.NewSelectionSort(array)
+	start1 := time.Now()
+
+	selectionSort := monothread_sort.NewSelectionSort(array1)
 
 	selectionSort.Sort()
 
-	elapsed := time.Since(start)
+	elapsed1 := time.Since(start1)
 
-	fmt.Printf("Execution time: %v\n", elapsed)
+	fmt.Printf("Selection sort execution time: %v\n", elapsed1)
 
-	// fmt.Println(array)
-	fmt.Println(array[size-1])
+	start2 := time.Now()
+
+	mergeSort := monothread_sort.NewMergeSort(array2)
+
+	mergeSort.Sort()
+
+	elapsed2 := time.Since(start2)
+
+	fmt.Printf("Merge sort execution time: %v\n", elapsed2)
+
+	if logs {
+		if total_logs {
+			fmt.Println(array1)
+			fmt.Println(array2)
+		}
+	}
+}
+
+func separator() {
+	fmt.Print("\n\n\n")
 }
