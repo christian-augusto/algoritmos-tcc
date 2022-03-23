@@ -15,10 +15,10 @@ func GenerateRandomInt64Array(size int64) []int64 {
 }
 
 func GenerateRandomInt64(seed int64) int64 {
-	min := int64(0)
-	max := int64(20_000_000_00)
-	// min := int64(-10)
-	// max := int64(10)
+	// min := int64(0)
+	// max := int64(20_000_000_00)
+	min := int64(-10)
+	max := int64(10)
 
 	rs := rand.NewSource(seed)
 	r := rand.New(rs)

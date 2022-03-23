@@ -1,40 +1,38 @@
 package main
 
 import (
+	"algoritmos-tcc-golang/constants"
 	"algoritmos-tcc-golang/monothread_sort"
+	"algoritmos-tcc-golang/multithread_sort"
 	"algoritmos-tcc-golang/utils"
 	"fmt"
 	"time"
 )
 
 func main() {
-	logs := true
-	total_logs := false
-	max := int64(10)
-	// max := int64(100)
-	// max := int64(1_000)
-	// max := int64(10_000)
-	// max := int64(100_000)
-	// max := int64(1_000_000)
-
-	for size := int64(1); size <= max; size++ {
+	for size := constants.MIN; size <= constants.MAX; size++ {
 		fmt.Printf("size: %v\n", size)
-		sort(size, logs, total_logs)
+		sort(size)
 		separator()
 	}
 }
 
-func sort(size int64, logs bool, total_logs bool) {
+func sort(size int64) {
 	array1 := utils.GenerateRandomInt64Array(size)
 	array2 := make([]int64, size)
+	array3 := make([]int64, size)
 	copy(array2, array1)
+	copy(array3, array1)
 
-	if logs {
-		if total_logs {
+	if constants.LOGS {
+		if constants.TOTAL_LOGS {
 			fmt.Println(array1)
 			fmt.Println(array2)
+			fmt.Println(array3)
 		}
 	}
+
+	// selectionSort
 
 	start1 := time.Now()
 
@@ -44,7 +42,7 @@ func sort(size int64, logs bool, total_logs bool) {
 
 	elapsed1 := time.Since(start1)
 
-	fmt.Printf("Selection sort execution time: %v\n", elapsed1)
+	// mergeSort
 
 	start2 := time.Now()
 
@@ -54,12 +52,25 @@ func sort(size int64, logs bool, total_logs bool) {
 
 	elapsed2 := time.Since(start2)
 
-	fmt.Printf("Merge sort execution time: %v\n", elapsed2)
+	// multithreadMergeSort
 
-	if logs {
-		if total_logs {
+	start3 := time.Now()
+
+	multithreadMergeSort := multithread_sort.NewMultithreadMergeSort()
+
+	multithreadMergeSort.Sort(array3)
+
+	elapsed3 := time.Since(start3)
+
+	if constants.LOGS {
+		fmt.Printf("Selection sort execution time: %v\n", elapsed1)
+		fmt.Printf("Merge sort execution time: %v\n", elapsed2)
+		fmt.Printf("Multithread merge sort execution time: %v\n", elapsed3)
+
+		if constants.TOTAL_LOGS {
 			fmt.Println(array1)
 			fmt.Println(array2)
+			fmt.Println(array3)
 		}
 	}
 }

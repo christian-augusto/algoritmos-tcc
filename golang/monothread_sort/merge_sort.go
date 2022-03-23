@@ -14,56 +14,56 @@ func (ss *mergeSort) Sort() {
 	ss.mergeSort(ss.array, 0, int64(len(ss.array)-1))
 }
 
-func (ss *mergeSort) mergeSort(arr []int64, l int64, r int64) {
-	if l < r {
-		m := l + (r-l)/2
+func (ss *mergeSort) mergeSort(arr []int64, low int64, high int64) {
+	if low < high {
+		mid := low + (high-low)/2
 
-		ss.mergeSort(arr, l, m)
-		ss.mergeSort(arr, m+1, r)
+		ss.mergeSort(arr, low, mid)
+		ss.mergeSort(arr, mid+1, high)
 
-		ss.merge(arr, l, m, r)
+		ss.merge(arr, low, mid, high)
 	}
 }
 
-func (ss *mergeSort) merge(arr []int64, l int64, m int64, r int64) {
+func (ss *mergeSort) merge(arr []int64, low int64, mid int64, high int64) {
 	var i, j, k int64
-	n1 := m - l + 1
-	n2 := r - m
+	n1 := mid - low + 1
+	n2 := high - mid
 
-	L := make([]int64, n1)
-	R := make([]int64, n2)
+	left := make([]int64, n1)
+	right := make([]int64, n2)
 
 	for i = 0; i < n1; i++ {
-		L[i] = arr[l+i]
+		left[i] = arr[low+i]
 	}
 
 	for j = 0; j < n2; j++ {
-		R[j] = arr[m+1+j]
+		right[j] = arr[mid+1+j]
 	}
 
 	i = 0
 	j = 0
-	k = l
+	k = low
 	for i < n1 && j < n2 {
-		if L[i] <= R[j] {
-			arr[k] = L[i]
+		if left[i] <= right[j] {
+			arr[k] = left[i]
 			i++
 		} else {
-			arr[k] = R[j]
+			arr[k] = right[j]
 			j++
 		}
 		k++
 	}
 
 	for i < n1 {
-		arr[k] = L[i]
-		i++
+		arr[k] = left[i]
 		k++
+		i++
 	}
 
 	for j < n2 {
-		arr[k] = R[j]
-		j++
+		arr[k] = right[j]
 		k++
+		j++
 	}
 }
