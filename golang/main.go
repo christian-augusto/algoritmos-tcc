@@ -17,10 +17,10 @@ func main() {
 	}
 }
 
-func sort(size int64) {
-	array1 := utils.GenerateRandomInt64Array(size)
-	array2 := make([]int64, size)
-	array3 := make([]int64, size)
+func sort(size int) {
+	array1 := utils.GenerateRandomIntArray(size)
+	array2 := make([]int, size)
+	array3 := make([]int, size)
 	copy(array2, array1)
 	copy(array3, array1)
 

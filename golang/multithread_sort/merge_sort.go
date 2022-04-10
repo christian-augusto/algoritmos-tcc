@@ -12,13 +12,13 @@ func NewMultithreadMergeSort() *mergeSort {
 	return &mergeSort{}
 }
 
-func (ss *mergeSort) Sort(array []int64) {
-	arrayLen := int64(len(array))
+func (ss *mergeSort) Sort(array []int) {
+	arrayLen := len(array)
 	var wg sync.WaitGroup
 
-	for i := int8(0); i < constants.THREADS_NUMBER; i++ {
-		low := int64(i) * (arrayLen / 4)
-		high := (int64(i)+1)*(arrayLen/4) - 1
+	for i := 0; i < constants.THREADS_NUMBER; i++ {
+		low := i * (arrayLen / 4)
+		high := (i+1)*(arrayLen/4) - 1
 		mid := low + (high-low)/2
 
 		wg.Add(1)
@@ -39,7 +39,7 @@ func (ss *mergeSort) Sort(array []int64) {
 	ss.merge(array, 0, (arrayLen-1)/2, arrayLen-1)
 }
 
-func (ss *mergeSort) mergeSort(arr []int64, low int64, high int64) {
+func (ss *mergeSort) mergeSort(arr []int, low int, high int) {
 	if low < high {
 		mid := low + (high-low)/2
 
@@ -50,13 +50,13 @@ func (ss *mergeSort) mergeSort(arr []int64, low int64, high int64) {
 	}
 }
 
-func (ss *mergeSort) merge(arr []int64, low int64, mid int64, high int64) {
-	var i, j, k int64
+func (ss *mergeSort) merge(arr []int, low int, mid int, high int) {
+	var i, j, k int
 	n1 := mid - low + 1
 	n2 := high - mid
 
-	left := make([]int64, n1)
-	right := make([]int64, n2)
+	left := make([]int, n1)
+	right := make([]int, n2)
 
 	for i = 0; i < n1; i++ {
 		left[i] = arr[low+i]

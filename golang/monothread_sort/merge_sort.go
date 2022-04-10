@@ -1,20 +1,20 @@
 package monothread_sort
 
 type mergeSort struct {
-	array []int64
+	array []int
 }
 
-func NewMergeSort(array []int64) *mergeSort {
+func NewMergeSort(array []int) *mergeSort {
 	return &mergeSort{
 		array: array,
 	}
 }
 
 func (ss *mergeSort) Sort() {
-	ss.mergeSort(ss.array, 0, int64(len(ss.array)-1))
+	ss.mergeSort(ss.array, 0, int(len(ss.array)-1))
 }
 
-func (ss *mergeSort) mergeSort(arr []int64, low int64, high int64) {
+func (ss *mergeSort) mergeSort(arr []int, low int, high int) {
 	if low < high {
 		mid := low + (high-low)/2
 
@@ -25,13 +25,13 @@ func (ss *mergeSort) mergeSort(arr []int64, low int64, high int64) {
 	}
 }
 
-func (ss *mergeSort) merge(arr []int64, low int64, mid int64, high int64) {
-	var i, j, k int64
+func (ss *mergeSort) merge(arr []int, low int, mid int, high int) {
+	var i, j, k int
 	n1 := mid - low + 1
 	n2 := high - mid
 
-	left := make([]int64, n1)
-	right := make([]int64, n2)
+	left := make([]int, n1)
+	right := make([]int, n2)
 
 	for i = 0; i < n1; i++ {
 		left[i] = arr[low+i]
