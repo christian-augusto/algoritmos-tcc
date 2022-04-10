@@ -1,27 +1,23 @@
 package monothread_sort
 
-type selectionSort struct {
-	array []int
+type selectionSort struct{}
+
+func NewSelectionSort() *selectionSort {
+	return &selectionSort{}
 }
 
-func NewSelectionSort(array []int) *selectionSort {
-	return &selectionSort{
-		array: array,
-	}
-}
-
-func (ss *selectionSort) Sort() {
-	for i := int(0); i < int(len(ss.array)); i++ {
+func (ss *selectionSort) Sort(array []int) {
+	for i := int(0); i < len(array); i++ {
 		index := i
 
-		for j := i + 1; j < int(len(ss.array)); j++ {
-			if ss.array[j] < ss.array[index] {
+		for j := i + 1; j < int(len(array)); j++ {
+			if array[j] < array[index] {
 				index = j
 			}
 		}
 
 		if index != i {
-			ss.array[i], ss.array[index] = ss.array[index], ss.array[i]
+			array[i], array[index] = array[index], array[i]
 		}
 	}
 }

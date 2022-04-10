@@ -1,31 +1,27 @@
 package monothread_sort
 
-type mergeSort struct {
-	array []int
+type mergeSort struct{}
+
+func NewMergeSort() *mergeSort {
+	return &mergeSort{}
 }
 
-func NewMergeSort(array []int) *mergeSort {
-	return &mergeSort{
-		array: array,
-	}
+func (ss *mergeSort) Sort(array []int) {
+	ss.mergeSort(array, 0, len(array)-1)
 }
 
-func (ss *mergeSort) Sort() {
-	ss.mergeSort(ss.array, 0, int(len(ss.array)-1))
-}
-
-func (ss *mergeSort) mergeSort(arr []int, low int, high int) {
+func (ss *mergeSort) mergeSort(array []int, low int, high int) {
 	if low < high {
 		mid := low + (high-low)/2
 
-		ss.mergeSort(arr, low, mid)
-		ss.mergeSort(arr, mid+1, high)
+		ss.mergeSort(array, low, mid)
+		ss.mergeSort(array, mid+1, high)
 
-		ss.merge(arr, low, mid, high)
+		ss.merge(array, low, mid, high)
 	}
 }
 
-func (ss *mergeSort) merge(arr []int, low int, mid int, high int) {
+func (ss *mergeSort) merge(array []int, low int, mid int, high int) {
 	var i, j, k int
 	n1 := mid - low + 1
 	n2 := high - mid
@@ -34,11 +30,11 @@ func (ss *mergeSort) merge(arr []int, low int, mid int, high int) {
 	right := make([]int, n2)
 
 	for i = 0; i < n1; i++ {
-		left[i] = arr[low+i]
+		left[i] = array[low+i]
 	}
 
 	for j = 0; j < n2; j++ {
-		right[j] = arr[mid+1+j]
+		right[j] = array[mid+1+j]
 	}
 
 	i = 0
@@ -46,23 +42,23 @@ func (ss *mergeSort) merge(arr []int, low int, mid int, high int) {
 	k = low
 	for i < n1 && j < n2 {
 		if left[i] <= right[j] {
-			arr[k] = left[i]
+			array[k] = left[i]
 			i++
 		} else {
-			arr[k] = right[j]
+			array[k] = right[j]
 			j++
 		}
 		k++
 	}
 
 	for i < n1 {
-		arr[k] = left[i]
+		array[k] = left[i]
 		k++
 		i++
 	}
 
 	for j < n2 {
-		arr[k] = right[j]
+		array[k] = right[j]
 		k++
 		j++
 	}
