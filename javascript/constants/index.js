@@ -1,0 +1,30 @@
+const LOGS = true;
+const TOTAL_LOGS = false;
+
+// const MIN_ARRAY_LENGTH = 8;
+// const MIN_ARRAY_LENGTH = 100;
+// const MIN_ARRAY_LENGTH = 1_000;
+// const MIN_ARRAY_LENGTH = 50_000;
+// const MIN_ARRAY_LENGTH = 100_000;
+const MIN_ARRAY_LENGTH = 1_000_000;
+
+// const MAX_ARRAY_LENGTH = 8;
+// const MAX_ARRAY_LENGTH = 100;
+// const MAX_ARRAY_LENGTH = 1_000;
+// const MAX_ARRAY_LENGTH = 50_000;
+// const MAX_ARRAY_LENGTH = 100_000;
+const MAX_ARRAY_LENGTH = 1_000_000;
+const THREADS_NUMBER = 4;
+
+const MIN_NUMBER = 0;
+const MAX_NUMBER = 20_000_000_00;
+
+module.exports = {
+  LOGS,
+  TOTAL_LOGS,
+  MIN_ARRAY_LENGTH,
+  MAX_ARRAY_LENGTH,
+  THREADS_NUMBER,
+  MIN_NUMBER,
+  MAX_NUMBER,
+};

@@ -15,10 +15,8 @@ func GenerateRandomIntArray(size int) []int {
 }
 
 func GenerateRandomInt(seed int) int {
-	// min := int(0)
-	// max := int(20_000_000_00)
-	min := -10
-	max := 10
+	min := int(0)
+	max := int(20_000_000_00)
 
 	rs := rand.NewSource(int64(seed))
 	r := rand.New(rs)
