@@ -23,12 +23,12 @@ func (ss *mergeSort) Sort(array []int) {
 
 		wg.Add(1)
 		go func() {
-			defer wg.Done()
-
 			ss.mergeSort(array, low, mid)
 			ss.mergeSort(array, mid+1, high)
 
 			ss.merge(array, low, mid, high)
+
+			wg.Done()
 		}()
 	}
 

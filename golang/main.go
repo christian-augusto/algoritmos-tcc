@@ -22,9 +22,11 @@ func sort(size int) {
 	array2 := make([]int, size)
 	array3 := make([]int, size)
 	array4 := make([]int, size)
+	array5 := make([]int, size)
 	copy(array2, array1)
 	copy(array3, array1)
 	copy(array4, array1)
+	copy(array5, array1)
 
 	if constants.LOGS {
 		if constants.TOTAL_LOGS {
@@ -72,17 +74,29 @@ func sort(size int) {
 
 	elapsed4 := time.Since(start4)
 
+	// multithreadQuickSort
+
+	start5 := time.Now()
+
+	multithreadQuickSort := multithread_sort.NewMultithreadQuickSort()
+
+	multithreadQuickSort.Sort(array5)
+
+	elapsed5 := time.Since(start5)
+
 	if constants.LOGS {
 		fmt.Printf("Selection sort execution time: %v\n", elapsed1)
 		fmt.Printf("Merge sort execution time: %v\n", elapsed2)
 		fmt.Printf("Multithread merge sort execution time: %v\n", elapsed3)
 		fmt.Printf("Quick sort execution time: %v\n", elapsed4)
+		fmt.Printf("Multithread quick sort execution time: %v\n", elapsed5)
 
 		if constants.TOTAL_LOGS {
 			fmt.Println(array1)
 			fmt.Println(array2)
 			fmt.Println(array3)
 			fmt.Println(array4)
+			fmt.Println(array5)
 		}
 	}
 }
