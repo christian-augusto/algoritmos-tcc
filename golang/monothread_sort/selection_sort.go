@@ -7,10 +7,10 @@ func NewSelectionSort() *selectionSort {
 }
 
 func (ss *selectionSort) Sort(array []int) {
-	for i := int(0); i < len(array); i++ {
+	for i := 0; i < len(array); i++ {
 		index := i
 
-		for j := i + 1; j < int(len(array)); j++ {
+		for j := i + 1; j < len(array); j++ {
 			if array[j] < array[index] {
 				index = j
 			}

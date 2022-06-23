@@ -22,7 +22,7 @@ func (ss *quickSort) quickSort(array []int, low int, high int) {
 func (ss *quickSort) partition(array []int, low int, high int) int {
 	pivot := array[high]
 
-	i := (low - 1)
+	i := low - 1
 
 	for j := low; j <= high-1; j++ {
 		if array[j] < pivot {
