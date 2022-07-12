@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	for size := constants.ARRAY_MIN_SIZE; size <= constants.ARRAY_MAX_SIZE; size += constants.ARRAY_SIZE_INCREMENTOR {
+	for _, size := range constants.ARRAY_SIZES {
 		fmt.Printf("size: %v\n", size)
 		sort(size)
 		separator()
