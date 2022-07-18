@@ -54,23 +54,23 @@ func sort(size int) {
 
 	elapsed2 := time.Since(start2)
 
-	// multithreadMergeSort
+	// quickSort
 
 	start3 := time.Now()
 
-	multithreadMergeSort := multithread_sort.NewMultithreadMergeSort()
+	quickSort := monothread_sort.NewQuickSort()
 
-	multithreadMergeSort.Sort(array3)
+	quickSort.Sort(array3)
 
 	elapsed3 := time.Since(start3)
 
-	// quickSort
+	// multithreadMergeSort
 
 	start4 := time.Now()
 
-	quickSort := monothread_sort.NewQuickSort()
+	multithreadMergeSort := multithread_sort.NewMultithreadMergeSort()
 
-	quickSort.Sort(array4)
+	multithreadMergeSort.Sort(array4)
 
 	elapsed4 := time.Since(start4)
 
@@ -87,8 +87,8 @@ func sort(size int) {
 	if constants.LOGS {
 		fmt.Printf("Selection sort execution time: %v\n", elapsed1)
 		fmt.Printf("Merge sort execution time: %v\n", elapsed2)
-		fmt.Printf("Multithread merge sort execution time: %v\n", elapsed3)
-		fmt.Printf("Quick sort execution time: %v\n", elapsed4)
+		fmt.Printf("Quick sort execution time: %v\n", elapsed3)
+		fmt.Printf("Multithread merge sort execution time: %v\n", elapsed4)
 		fmt.Printf("Multithread quick sort execution time: %v\n", elapsed5)
 
 		if constants.TOTAL_LOGS {
