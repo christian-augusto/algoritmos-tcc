@@ -1,11 +1,11 @@
-const { LOGS, TOTAL_LOGS, MIN_ARRAY_LENGTH, MAX_ARRAY_LENGTH } = require("./constants");
+const { LOGS, TOTAL_LOGS, ARRAY_SIZES } = require("./constants");
 const monothreadSort = require("./monothread-sort");
 const utils = require("./utils");
 
 function main() {
-  for (let size = MIN_ARRAY_LENGTH; size <= MAX_ARRAY_LENGTH; size++) {
+  ARRAY_SIZES.forEach(function (size) {
     sort(size);
-  }
+  });
 }
 
 function sort(size) {
@@ -13,6 +13,7 @@ function sort(size) {
 
   const array1 = utils.genRandomIntegersArray(size);
   const array2 = utils.copyArray(array1);
+  const array3 = utils.copyArray(array1);
 
   if (LOGS) {
     if (TOTAL_LOGS) {
@@ -20,11 +21,15 @@ function sort(size) {
     }
   }
 
+  // selection sort
+
   const start1 = new Date();
 
   monothreadSort.selectionSort.sort(array1);
 
   const elapsed1 = utils.timeElapsedSinceSeconds(start1);
+
+  // merge sort
 
   const start2 = new Date();
 
@@ -32,14 +37,24 @@ function sort(size) {
 
   const elapsed2 = utils.timeElapsedSinceSeconds(start2);
 
+  // quick sort
+
+  const start3 = new Date();
+
+  monothreadSort.mergeSort.sort(array3);
+
+  const elapsed3 = utils.timeElapsedSinceSeconds(start3);
+
   if (LOGS) {
     console.log(`Selection sort execution time: ${elapsed1}s`);
     console.log(`Merge sort execution time: ${elapsed2}s`);
+    console.log(`Quick sort execution time: ${elapsed3}s`);
     console.log("\n");
 
     if (TOTAL_LOGS) {
       console.log(array1);
       console.log(array2);
+      console.log(array3);
     }
   }
 }
