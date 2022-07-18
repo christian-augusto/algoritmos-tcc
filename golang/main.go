@@ -18,7 +18,7 @@ func main() {
 }
 
 func sort(size int) {
-	array1 := utils.GenerateRandomIntArray(size)
+	array1 := utils.GenerateRandomIntArray(size, constants.RANDOM_INT_MIN, constants.RANDOM_INT_MAX)
 	array2 := make([]int, size)
 	array3 := make([]int, size)
 	array4 := make([]int, size)

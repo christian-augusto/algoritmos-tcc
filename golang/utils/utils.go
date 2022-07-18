@@ -1,27 +1,32 @@
 package utils
 
 import (
-	"algoritmos-tcc-golang/constants"
 	"math/rand"
 	"time"
 )
 
-func GenerateRandomIntArray(size int) []int {
+func GenerateRandomIntArray(size int, min int, max int) []int {
 	array := make([]int, size)
 
 	for i := int(0); i < size; i++ {
-		array[i] = GenerateRandomInt(int64(i) + time.Now().Unix())
+		array[i] = generateRandomInt(int64(i)+time.Now().Unix(), min, max)
 	}
 
 	return array
 }
 
-func GenerateRandomInt(seed int64) int {
-	min := constants.RANDOM_INT_MIN
-	max := constants.RANDOM_INT_MAX
-
+func generateRandomInt(seed int64, min int, max int) int {
 	rs := rand.NewSource(seed)
 	r := rand.New(rs)
 
 	return r.Intn(max-min) + min
+}
+
+// IfThenElse evaluates a condition, if true returns the first parameter otherwise the second
+func IfThenElse(condition bool, a interface{}, b interface{}) interface{} {
+	if condition {
+		return a
+	}
+
+	return b
 }
