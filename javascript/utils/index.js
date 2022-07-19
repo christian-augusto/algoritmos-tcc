@@ -24,12 +24,17 @@ function copyArray(array) {
   return newArray;
 }
 
-function timeElapsedSinceSeconds(start) {
-  return (new Date() - start) / 1000;
+function timeElapsedSinceMiliSeconds(start) {
+  return new Date() - start;
+}
+
+function intDivision(a, b) {
+  return parseInt(a / b);
 }
 
 module.exports = {
   genRandomIntegersArray,
   copyArray,
-  timeElapsedSinceSeconds,
+  timeElapsedSinceMiliSeconds,
+  intDivision,
 };

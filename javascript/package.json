@@ -1,9 +1,12 @@
 {
   "name": "algoritmos-tcc-javascript",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node main.js"
+  },
   "engines": {
-    "node": "16.14.0"
+    "node": "16.15.1"
   }
 }
