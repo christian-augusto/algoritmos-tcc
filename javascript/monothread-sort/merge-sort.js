@@ -1,10 +1,12 @@
+const { intDivision } = require("../utils");
+
 function sort(array) {
   mergeSort(array, 0, array.length - 1);
 }
 
 function mergeSort(array, low, high) {
   if (low < high) {
-    const mid = parseInt(low + (high - low) / 2);
+    const mid = low + intDivision(high - low, 2);
 
     mergeSort(array, low, mid);
     mergeSort(array, mid + 1, high);
