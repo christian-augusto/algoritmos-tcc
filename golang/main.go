@@ -34,7 +34,7 @@ func sort(size int) {
 		}
 	}
 
-	// selectionSort
+	// selection sort
 
 	start1 := time.Now()
 
@@ -44,7 +44,7 @@ func sort(size int) {
 
 	elapsed1 := time.Since(start1)
 
-	// mergeSort
+	// merge sort
 
 	start2 := time.Now()
 
@@ -54,7 +54,7 @@ func sort(size int) {
 
 	elapsed2 := time.Since(start2)
 
-	// quickSort
+	// quick sort
 
 	start3 := time.Now()
 
@@ -64,7 +64,7 @@ func sort(size int) {
 
 	elapsed3 := time.Since(start3)
 
-	// multithreadMergeSort
+	// multithread merge sort
 
 	start4 := time.Now()
 
@@ -74,7 +74,7 @@ func sort(size int) {
 
 	elapsed4 := time.Since(start4)
 
-	// multithreadQuickSort
+	// multithread quick sort
 
 	start5 := time.Now()
 
