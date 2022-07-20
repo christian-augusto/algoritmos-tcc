@@ -36,60 +36,60 @@ func sort(size int) {
 
 	// selection sort
 
-	start1 := time.Now()
+	start1 := time.Now().UnixMilli()
 
 	selectionSort := monothread_sort.NewSelectionSort()
 
 	selectionSort.Sort(array1)
 
-	elapsed1 := time.Since(start1)
+	elapsed1 := time.Now().UnixMilli() - start1
 
 	// merge sort
 
-	start2 := time.Now()
+	start2 := time.Now().UnixMilli()
 
 	mergeSort := monothread_sort.NewMergeSort()
 
 	mergeSort.Sort(array2)
 
-	elapsed2 := time.Since(start2)
+	elapsed2 := time.Now().UnixMilli() - start2
 
 	// quick sort
 
-	start3 := time.Now()
+	start3 := time.Now().UnixMilli()
 
 	quickSort := monothread_sort.NewQuickSort()
 
 	quickSort.Sort(array3)
 
-	elapsed3 := time.Since(start3)
+	elapsed3 := time.Now().UnixMilli() - start3
 
 	// multithread merge sort
 
-	start4 := time.Now()
+	start4 := time.Now().UnixMilli()
 
 	multithreadMergeSort := multithread_sort.NewMultithreadMergeSort()
 
 	multithreadMergeSort.Sort(array4)
 
-	elapsed4 := time.Since(start4)
+	elapsed4 := time.Now().UnixMilli() - start4
 
 	// multithread quick sort
 
-	start5 := time.Now()
+	start5 := time.Now().UnixMilli()
 
 	multithreadQuickSort := multithread_sort.NewMultithreadQuickSort()
 
 	multithreadQuickSort.Sort(array5)
 
-	elapsed5 := time.Since(start5)
+	elapsed5 := time.Now().UnixMilli() - start5
 
 	if constants.LOGS {
-		fmt.Printf("Selection sort execution time: %v\n", elapsed1)
-		fmt.Printf("Merge sort execution time: %v\n", elapsed2)
-		fmt.Printf("Quick sort execution time: %v\n", elapsed3)
-		fmt.Printf("Multithread merge sort execution time: %v\n", elapsed4)
-		fmt.Printf("Multithread quick sort execution time: %v\n", elapsed5)
+		fmt.Printf("Selection sort execution time: %v ms\n", elapsed1)
+		fmt.Printf("Merge sort execution time: %v ms\n", elapsed2)
+		fmt.Printf("Quick sort execution time: %v ms\n", elapsed3)
+		fmt.Printf("Multithread merge sort execution time: %v ms\n", elapsed4)
+		fmt.Printf("Multithread quick sort execution time: %v ms\n", elapsed5)
 
 		if constants.TOTAL_LOGS {
 			fmt.Println(array1)
