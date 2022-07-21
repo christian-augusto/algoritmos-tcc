@@ -18,85 +18,85 @@ func main() {
 }
 
 func sort(size int) {
-	array1 := utils.GenerateRandomIntArray(size, constants.RANDOM_INT_MIN, constants.RANDOM_INT_MAX)
-	array2 := make([]int, size)
-	array3 := make([]int, size)
-	array4 := make([]int, size)
-	array5 := make([]int, size)
-	copy(array2, array1)
-	copy(array3, array1)
-	copy(array4, array1)
-	copy(array5, array1)
+	array_1 := utils.GenerateRandomIntArray(size, constants.RANDOM_INT_MIN, constants.RANDOM_INT_MAX)
+	array_2 := make([]int, size)
+	array_3 := make([]int, size)
+	array_4 := make([]int, size)
+	array_5 := make([]int, size)
+	copy(array_2, array_1)
+	copy(array_3, array_1)
+	copy(array_4, array_1)
+	copy(array_5, array_1)
 
 	if constants.LOGS {
 		if constants.TOTAL_LOGS {
-			fmt.Println(array1)
+			fmt.Println(array_1)
 		}
 	}
 
 	// selection sort
 
-	start1 := time.Now().UnixMilli()
-
 	selectionSort := monothread_sort.NewSelectionSort()
 
-	selectionSort.Sort(array1)
+	start_1 := time.Now().UnixMilli()
 
-	elapsed1 := time.Now().UnixMilli() - start1
+	selectionSort.Sort(array_1)
+
+	elapsed_1 := time.Now().UnixMilli() - start_1
 
 	// merge sort
 
-	start2 := time.Now().UnixMilli()
-
 	mergeSort := monothread_sort.NewMergeSort()
 
-	mergeSort.Sort(array2)
+	start_2 := time.Now().UnixMilli()
 
-	elapsed2 := time.Now().UnixMilli() - start2
+	mergeSort.Sort(array_2)
+
+	elapsed_2 := time.Now().UnixMilli() - start_2
 
 	// quick sort
 
-	start3 := time.Now().UnixMilli()
-
 	quickSort := monothread_sort.NewQuickSort()
 
-	quickSort.Sort(array3)
+	start_3 := time.Now().UnixMilli()
 
-	elapsed3 := time.Now().UnixMilli() - start3
+	quickSort.Sort(array_3)
+
+	elapsed_3 := time.Now().UnixMilli() - start_3
 
 	// multithread merge sort
 
-	start4 := time.Now().UnixMilli()
-
 	multithreadMergeSort := multithread_sort.NewMultithreadMergeSort()
 
-	multithreadMergeSort.Sort(array4)
+	start_4 := time.Now().UnixMilli()
 
-	elapsed4 := time.Now().UnixMilli() - start4
+	multithreadMergeSort.Sort(array_4)
+
+	elapsed_4 := time.Now().UnixMilli() - start_4
 
 	// multithread quick sort
 
-	start5 := time.Now().UnixMilli()
-
 	multithreadQuickSort := multithread_sort.NewMultithreadQuickSort()
 
-	multithreadQuickSort.Sort(array5)
+	start_5 := time.Now().UnixMilli()
 
-	elapsed5 := time.Now().UnixMilli() - start5
+	multithreadQuickSort.Sort(array_5)
+
+	elapsed_5 := time.Now().UnixMilli() - start_5
 
 	if constants.LOGS {
-		fmt.Printf("Selection sort execution time: %v ms\n", elapsed1)
-		fmt.Printf("Merge sort execution time: %v ms\n", elapsed2)
-		fmt.Printf("Quick sort execution time: %v ms\n", elapsed3)
-		fmt.Printf("Multithread merge sort execution time: %v ms\n", elapsed4)
-		fmt.Printf("Multithread quick sort execution time: %v ms\n", elapsed5)
+		fmt.Printf("Selection sort execution time: %v ms\n", elapsed_1)
+		fmt.Printf("Merge sort execution time: %v ms\n", elapsed_2)
+		fmt.Printf("Quick sort execution time: %v ms\n", elapsed_3)
+		fmt.Printf("Multithread merge sort execution time: %v ms\n", elapsed_4)
+		fmt.Printf("Multithread quick sort execution time: %v ms\n", elapsed_5)
 
 		if constants.TOTAL_LOGS {
-			fmt.Println(array1)
-			fmt.Println(array2)
-			fmt.Println(array3)
-			fmt.Println(array4)
-			fmt.Println(array5)
+			fmt.Println(array_1)
+			fmt.Println(array_2)
+			fmt.Println(array_3)
+			fmt.Println(array_4)
+			fmt.Println(array_5)
 		}
 	}
 }

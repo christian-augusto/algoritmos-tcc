@@ -8,7 +8,7 @@ import (
 func GenerateRandomIntArray(size int, min int, max int) []int {
 	array := make([]int, size)
 
-	for i := int(0); i < size; i++ {
+	for i := 0; i < size; i++ {
 		array[i] = generateRandomInt(int64(i)+time.Now().Unix(), min, max)
 	}
 
