@@ -30,10 +30,12 @@ func sort(size int) {
 	copy(array_4, array_1)
 	copy(array_5, array_1)
 
-	if constants.LOGS {
-		if constants.TOTAL_LOGS {
-			fmt.Println(array_1)
-		}
+	if constants.LOGS && constants.TOTAL_LOGS {
+		fmt.Println(array_1)
+		fmt.Println(array_2)
+		fmt.Println(array_3)
+		fmt.Println(array_4)
+		fmt.Println(array_5)
 	}
 
 	// selection sort

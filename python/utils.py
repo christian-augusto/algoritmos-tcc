@@ -2,13 +2,14 @@ import time
 
 from random import randint
 
+
 def generate_random_int_array(size: int, min: int, max: int):
-	array = []
+    array = []
 
-	for _ in range(0, size):
-		array.append(randint(min, max))
+    for _ in range(0, size):
+        array.append(randint(min, max))
 
-	return array
+    return array
 
 
 def copy_array(array: list):

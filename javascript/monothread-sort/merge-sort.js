@@ -27,8 +27,8 @@ function merge(array, low, mid, high) {
     left[i] = array[low + i];
   }
 
-  for (j = 0; j < n2; j++) {
-    right[j] = array[mid + 1 + j];
+  for (i = 0; i < n2; i++) {
+    right[i] = array[mid + 1 + i];
   }
 
   i = 0;
