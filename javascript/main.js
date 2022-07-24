@@ -7,13 +7,15 @@ async function main() {
   for (let i = 0; i < ARRAY_SIZES.length; i++) {
     const size = ARRAY_SIZES[i];
 
+    console.log(`size: ${size}`);
+
     await sort(size);
+
+    separator();
   }
 }
 
 async function sort(size) {
-  console.log(`size: ${size}`);
-
   const array1 = utils.genRandomIntegersArray(size);
   const array2 = utils.copyArray(array1);
   const array3 = utils.copyArray(array1);
@@ -72,7 +74,6 @@ async function sort(size) {
     console.log(`Quick sort execution time: ${elapsed3} ms`);
     console.log(`Multithread merge sort execution time: ${elapsed4} ms`);
     console.log(`Multithread quick sort execution time: ${elapsed5} ms`);
-    console.log("\n");
 
     if (TOTAL_LOGS) {
       console.log(array1);
@@ -82,6 +83,10 @@ async function sort(size) {
       console.log(array5);
     }
   }
+}
+
+function separator() {
+  console.log();
 }
 
 main();

@@ -12,7 +12,9 @@ import (
 func main() {
 	for _, size := range constants.ARRAY_SIZES {
 		fmt.Printf("size: %v\n", size)
+
 		sort(size)
+
 		separator()
 	}
 }
