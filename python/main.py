@@ -4,6 +4,7 @@ from constants import (
 )
 from monothread.selection_sort import SelectionSort as MonothreadSelectionSort
 from monothread.merge_sort import MergeSort as MonothreadMergeSort
+from monothread.quick_sort import QuickSort as MonothreadQuickSort
 
 
 def main():
@@ -20,10 +21,12 @@ def sort(size: int):
         size, RANDOM_INT_MIN, RANDOM_INT_MAX
     )
     array_2 = utils.copy_array(array_1)
+    array_3 = utils.copy_array(array_1)
 
     if LOGS and TOTAL_LOGS:
         print(array_1)
         print(array_2)
+        print(array_3)
 
     # selection sort
 
@@ -45,13 +48,25 @@ def sort(size: int):
 
     elapsed_2 = utils.current_milli_time() - start_2
 
+    # quick sort
+
+    quick_sort = MonothreadQuickSort()
+
+    start_3 = utils.current_milli_time()
+
+    quick_sort.sort(array_3)
+
+    elapsed_3 = utils.current_milli_time() - start_3
+
     if LOGS:
         print(f"Selection sort execution time: {elapsed_1} ms")
         print(f"Merge sort execution time: {elapsed_2} ms")
+        print(f"Quick sort execution time: {elapsed_3} ms")
 
         if TOTAL_LOGS:
             print(array_1)
             print(array_2)
+            print(array_3)
 
 
 def separator():
