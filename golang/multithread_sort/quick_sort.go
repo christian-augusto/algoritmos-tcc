@@ -23,35 +23,40 @@ func (ss *quickSort) quickSort(array []int, low int, high int) {
 	if low < high {
 		pi := ss.partition(array, low, high)
 
+		localThreadsCount := 0
+
 		var wg sync.WaitGroup
 
 		if ss.threadsCount < constants.THREADS_NUMBER {
+			ss.threadsCount++
+			localThreadsCount++
 			wg.Add(1)
 
 			go func() {
 				ss.quickSort(array, low, pi-1)
-			}()
-			ss.threadsCount++
 
-			wg.Done()
+				wg.Done()
+			}()
 		} else {
 			ss.quickSort(array, low, pi-1)
 		}
 
 		if ss.threadsCount < constants.THREADS_NUMBER {
+			ss.threadsCount++
+			localThreadsCount++
 			wg.Add(1)
 
 			go func() {
 				ss.quickSort(array, pi+1, high)
-			}()
-			ss.threadsCount++
 
-			wg.Done()
+				wg.Done()
+			}()
 		} else {
 			ss.quickSort(array, pi+1, high)
 		}
 
 		wg.Wait()
+		ss.threadsCount -= localThreadsCount
 	}
 }
 

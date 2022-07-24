@@ -102,5 +102,5 @@ func sort(size int) {
 }
 
 func separator() {
-	fmt.Print("\n\n\n")
+	fmt.Print("\n")
 }

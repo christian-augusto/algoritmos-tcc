@@ -16,7 +16,7 @@ async function quickSort(array, low, high) {
       threadsCount++;
 
       promises.push(
-        new Promise(async function (resolve, reject) {
+        new Promise(async function (resolve) {
           await quickSort(array, low, pi - 1);
 
           resolve(true);
@@ -30,7 +30,7 @@ async function quickSort(array, low, high) {
       threadsCount++;
 
       promises.push(
-        new Promise(async function (resolve, reject) {
+        new Promise(async function (resolve) {
           await quickSort(array, pi + 1, high);
 
           resolve(true);
