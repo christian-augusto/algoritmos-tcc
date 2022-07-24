@@ -1,4 +1,4 @@
-const { MIN_NUMBER, MAX_NUMBER } = require("../constants");
+const { RANDOM_INT_MIN, RANDOM_INT_MAX } = require("../constants");
 
 function genRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
@@ -8,7 +8,7 @@ function genRandomIntegersArray(size) {
   const array = [];
 
   for (let i = 0; i < size; i++) {
-    array.push(parseInt(genRandomNumber(MIN_NUMBER, MAX_NUMBER)));
+    array.push(parseInt(genRandomNumber(RANDOM_INT_MIN, RANDOM_INT_MAX)));
   }
 
   return array;
