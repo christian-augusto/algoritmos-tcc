@@ -7,7 +7,6 @@ import (
 
 type mergeSort struct{}
 
-// array len % 4 == 0
 func NewMultithreadMergeSort() *mergeSort {
 	return &mergeSort{}
 }
