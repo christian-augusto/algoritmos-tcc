@@ -11,7 +11,7 @@ class MergeSort:
 
             self.merge(array, low, mid, high)
 
-    def merge(self, array: list,  low: int, mid: int, high: int):
+    def merge(self, array: list, low: int, mid: int, high: int):
         n1 = mid - low + 1
         n2 = high - mid
 

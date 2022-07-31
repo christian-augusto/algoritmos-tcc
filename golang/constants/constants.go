@@ -17,5 +17,5 @@ const THREADS_NUMBER = 4
 const RANDOM_INT_MIN = 0
 
 var RANDOM_INT_MAX = utils.IfThenElse(
-	DEBUG, 100, 20_000_000_00,
+	DEBUG, 100, 2_000_000_000,
 ).(int)
