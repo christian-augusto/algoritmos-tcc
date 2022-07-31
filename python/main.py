@@ -6,6 +6,7 @@ from monothread.selection_sort import SelectionSort as MonothreadSelectionSort
 from monothread.merge_sort import MergeSort as MonothreadMergeSort
 from monothread.quick_sort import QuickSort as MonothreadQuickSort
 from multithread.merge_sort import MergeSort as MultithreadMergeSort
+from multithread.quick_sort import QuickSort as MultithreadQuickSort
 
 
 def main():
@@ -24,12 +25,14 @@ def sort(size: int):
     array_2 = utils.copy_array(array_1)
     array_3 = utils.copy_array(array_1)
     array_4 = utils.copy_array(array_1)
+    array_5 = utils.copy_array(array_1)
 
     if LOGS and TOTAL_LOGS:
         print(array_1)
         print(array_2)
         print(array_3)
         print(array_4)
+        print(array_5)
 
     # selection sort
 
@@ -71,17 +74,29 @@ def sort(size: int):
 
     elapsed_4 = utils.current_milli_time() - start_4
 
+    # multithread quick sort
+
+    multithread_quick_sort = MultithreadQuickSort()
+
+    start_5 = utils.current_milli_time()
+
+    multithread_quick_sort.sort(array_5)
+
+    elapsed_5 = utils.current_milli_time() - start_5
+
     if LOGS:
         print(f"Selection sort execution time: {elapsed_1} ms")
         print(f"Merge sort execution time: {elapsed_2} ms")
         print(f"Quick sort execution time: {elapsed_3} ms")
         print(f"Multithread merge sort execution time: {elapsed_4} ms")
+        print(f"Multithread quick sort execution time: {elapsed_5} ms")
 
         if TOTAL_LOGS:
             print(array_1)
             print(array_2)
             print(array_3)
             print(array_4)
+            print(array_5)
 
 
 def separator():

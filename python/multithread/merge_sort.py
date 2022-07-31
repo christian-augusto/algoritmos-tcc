@@ -12,11 +12,10 @@ class MergeSort:
             high = (i + 1) * (arrayLen // 4) - 1
             mid = low + (high-low)//2
 
-            threads.append(
-                threading.Thread(target=self.sort_thread,
-                                 args=(array, low, mid, high))
-            )
-            threads[i].start()
+            thread = threading.Thread(target=self.sort_thread,
+                                      args=(array, low, mid, high))
+            threads.append(thread)
+            thread.start()
 
         for thread in threads:
             thread.join()
