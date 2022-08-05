@@ -1,0 +1,98 @@
+javascript (node v16.15.1):
+size: 8
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 1 ms
+Multithread quick sort execution time: 0 ms
+
+size: 16
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 100
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 1.000
+Selection sort execution time: 2 ms
+Merge sort execution time: 1 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 1 ms
+Multithread quick sort execution time: 2 ms
+
+size: 10.000
+Selection sort execution time: 35 ms
+Merge sort execution time: 3 ms
+Quick sort execution time: 2 ms
+Multithread merge sort execution time: 2 ms
+Multithread quick sort execution time: 3 ms
+
+size: 25.000
+Selection sort execution time: 213 ms
+Merge sort execution time: 3 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 4 ms
+Multithread quick sort execution time: 7 ms
+
+size: 50.000
+Selection sort execution time: 851 ms
+Merge sort execution time: 11 ms
+Quick sort execution time: 2 ms
+Multithread merge sort execution time: 11 ms
+Multithread quick sort execution time: 14 ms
+
+size: 75.000
+Selection sort execution time: 1921 ms
+Merge sort execution time: 20 ms
+Quick sort execution time: 4 ms
+Multithread merge sort execution time: 15 ms
+Multithread quick sort execution time: 20 ms
+
+size: 100.000
+Selection sort execution time: 3408 ms
+Merge sort execution time: 18 ms
+Quick sort execution time: 6 ms
+Multithread merge sort execution time: 17 ms
+Multithread quick sort execution time: 24 ms
+
+size: 250.000
+Selection sort execution time: 21336 ms
+Merge sort execution time: 51 ms
+Quick sort execution time: 15 ms
+Multithread merge sort execution time: 42 ms
+Multithread quick sort execution time: 69 ms
+
+size: 500.000
+Selection sort execution time: 85334 ms
+Merge sort execution time: 104 ms
+Quick sort execution time: 31 ms
+Multithread merge sort execution time: 98 ms
+Multithread quick sort execution time: 136 ms
+
+size: 750.000
+Selection sort execution time: 191627 ms
+Merge sort execution time: 151 ms
+Quick sort execution time: 51 ms
+Multithread merge sort execution time: 139 ms
+Multithread quick sort execution time: 198 ms
+
+size: 1.000.000
+Selection sort execution time: 340634 ms
+Merge sort execution time: 210 ms
+Quick sort execution time: 68 ms
+Multithread merge sort execution time: 194 ms
+Multithread quick sort execution time: 267 ms
+
+size: 5.000.000
+Selection sort execution time: 8610280 ms
+Merge sort execution time: 1114 ms
+Quick sort execution time: 371 ms
+Multithread merge sort execution time: 1110 ms
+Multithread quick sort execution time: 1342 ms

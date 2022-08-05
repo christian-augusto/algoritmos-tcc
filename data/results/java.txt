@@ -1,0 +1,101 @@
+java:
+openjdk version "18.0.2" 2022-07-19
+OpenJDK Runtime Environment (build 18.0.2+9-61)
+OpenJDK 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+size: 8
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 2 ms
+
+size: 16
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 1 ms
+
+size: 100
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 1 ms
+Multithread quick sort execution time: 0 ms
+
+size: 1.000
+Selection sort execution time: 2 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 1 ms
+
+size: 10.000
+Selection sort execution time: 79 ms
+Merge sort execution time: 1 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 6 ms
+Multithread quick sort execution time: 3 ms
+
+size: 25.000
+Selection sort execution time: 493 ms
+Merge sort execution time: 2 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 2 ms
+Multithread quick sort execution time: 3 ms
+
+size: 50.000
+Selection sort execution time: 1975 ms
+Merge sort execution time: 5 ms
+Quick sort execution time: 2 ms
+Multithread merge sort execution time: 3 ms
+Multithread quick sort execution time: 2 ms
+
+size: 75.000
+Selection sort execution time: 4440 ms
+Merge sort execution time: 7 ms
+Quick sort execution time: 3 ms
+Multithread merge sort execution time: 4 ms
+Multithread quick sort execution time: 2 ms
+
+size: 100.000
+Selection sort execution time: 7901 ms
+Merge sort execution time: 10 ms
+Quick sort execution time: 6 ms
+Multithread merge sort execution time: 5 ms
+Multithread quick sort execution time: 6 ms
+
+size: 250.000
+Selection sort execution time: 9516 ms
+Merge sort execution time: 24 ms
+Quick sort execution time: 13 ms
+Multithread merge sort execution time: 12 ms
+Multithread quick sort execution time: 15 ms
+
+size: 500.000
+Selection sort execution time: 38207 ms
+Merge sort execution time: 57 ms
+Quick sort execution time: 28 ms
+Multithread merge sort execution time: 23 ms
+Multithread quick sort execution time: 24 ms
+
+size: 750.000
+Selection sort execution time: 86623 ms
+Merge sort execution time: 90 ms
+Quick sort execution time: 43 ms
+Multithread merge sort execution time: 29 ms
+Multithread quick sort execution time: 25 ms
+
+size: 1.000.000
+Selection sort execution time: 151168 ms
+Merge sort execution time: 103 ms
+Quick sort execution time: 59 ms
+Multithread merge sort execution time: 38 ms
+Multithread quick sort execution time: 43 ms
+
+size: 5.000.000
+Selection sort execution time: 3822669 ms
+Merge sort execution time: 561 ms
+Quick sort execution time: 328 ms
+Multithread merge sort execution time: 198 ms
+Multithread quick sort execution time: 219 ms

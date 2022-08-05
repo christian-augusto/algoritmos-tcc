@@ -1,0 +1,98 @@
+golang (go version go1.18.3 windows/amd64):
+size: 8
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 16
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 100
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 1.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+size: 10.000
+Selection sort execution time: 34 ms
+Merge sort execution time: 1 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 1 ms
+
+size: 25.000
+Selection sort execution time: 212 ms
+Merge sort execution time: 3 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 1 ms
+Multithread quick sort execution time: 1 ms
+
+size: 50.000
+Selection sort execution time: 851 ms
+Merge sort execution time: 6 ms
+Quick sort execution time: 2 ms
+Multithread merge sort execution time: 2 ms
+Multithread quick sort execution time: 2 ms
+
+size: 75.000
+Selection sort execution time: 1912 ms
+Merge sort execution time: 8 ms
+Quick sort execution time: 4 ms
+Multithread merge sort execution time: 4 ms
+Multithread quick sort execution time: 3 ms
+
+size: 100.000
+Selection sort execution time: 3400 ms
+Merge sort execution time: 12 ms
+Quick sort execution time: 5 ms
+Multithread merge sort execution time: 6 ms
+Multithread quick sort execution time: 4 ms
+
+size: 250.000
+Selection sort execution time: 22288 ms
+Merge sort execution time: 39 ms
+Quick sort execution time: 16 ms
+Multithread merge sort execution time: 15 ms
+Multithread quick sort execution time: 10 ms
+
+size: 500.000
+Selection sort execution time: 85281 ms
+Merge sort execution time: 55 ms
+Quick sort execution time: 28 ms
+Multithread merge sort execution time: 23 ms
+Multithread quick sort execution time: 28 ms
+
+size: 750.000
+Selection sort execution time: 192238 ms
+Merge sort execution time: 88 ms
+Quick sort execution time: 42 ms
+Multithread merge sort execution time: 30 ms
+Multithread quick sort execution time: 24 ms
+
+size: 1.000.000
+Selection sort execution time: 342656 ms
+Merge sort execution time: 121 ms
+Quick sort execution time: 58 ms
+Multithread merge sort execution time: 39 ms
+Multithread quick sort execution time: 40 ms
+
+size: 5.000.000
+Selection sort execution time: 8620618 ms
+Merge sort execution time: 652 ms
+Quick sort execution time: 326 ms
+Multithread merge sort execution time: 203 ms
+Multithread quick sort execution time: 244 ms
