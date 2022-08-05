@@ -22,6 +22,6 @@ public class Utils {
     }
 
     public static long getCurrentUnixTime() {
-        return System.currentTimeMillis() / 1000L;
+        return System.currentTimeMillis();
     }
 }
