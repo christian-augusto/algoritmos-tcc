@@ -1,25 +1,31 @@
-package monothread_sort;
+package algorithms.sort;
 
 /**
- * MergeSort
+ * MonothreadMergeSort
  */
-public class MergeSort {
-    public void sort(int[] array) {
-        this.mergeSort(array, 0, array.length - 1);
+public class MonothreadMergeSort {
+    private int[] array = null;
+
+    public MonothreadMergeSort(int[] array) {
+        this.array = array;
     }
 
-    private void mergeSort(int[] array, int low, int high) {
+    public void sort() {
+        mergeSort(0, array.length - 1);
+    }
+
+    private void mergeSort(int low, int high) {
         if (low < high) {
             int mid = low + (high - low) / 2;
 
-            this.mergeSort(array, low, mid);
-            this.mergeSort(array, mid + 1, high);
+            mergeSort(low, mid);
+            mergeSort(mid + 1, high);
 
-            this.merge(array, low, mid, high);
+            merge(low, mid, high);
         }
     }
 
-    private void merge(int[] array, int low, int mid, int high) {
+    private void merge(int low, int mid, int high) {
         int i, j, k;
         int n1 = mid - low + 1;
         int n2 = high - mid;

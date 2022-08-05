@@ -1,10 +1,16 @@
-package monothread_sort;
+package algorithms.sort;
 
 /**
- * SelectionSort
+ * MonothreadSelectionSort
  */
-public class SelectionSort {
-    public void sort(int[] array) {
+public class MonothreadSelectionSort {
+    private int[] array = null;
+
+    public MonothreadSelectionSort(int[] array) {
+        this.array = array;
+    }
+
+    public void sort() {
         for (int i = 0; i < array.length; i++) {
             int index = i;
 

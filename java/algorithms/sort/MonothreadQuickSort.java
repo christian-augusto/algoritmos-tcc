@@ -1,23 +1,29 @@
-package monothread_sort;
+package algorithms.sort;
 
 /**
- * QuickSort
+ * MonothreadQuickSort
  */
-public class QuickSort {
-    public void sort(int[] array) {
-        this.quickSort(array, 0, array.length - 1);
+public class MonothreadQuickSort {
+    private int[] array = null;
+
+    public MonothreadQuickSort(int[] array) {
+        this.array = array;
     }
 
-    private void quickSort(int[] array, int low, int high) {
-        if (low < high) {
-            int pi = this.partition(array, low, high);
+    public void sort() {
+        quickSort(0, array.length - 1);
+    }
 
-            this.quickSort(array, low, pi - 1);
-            this.quickSort(array, pi + 1, high);
+    private void quickSort(int low, int high) {
+        if (low < high) {
+            int pi = partition(low, high);
+
+            quickSort(low, pi - 1);
+            quickSort(pi + 1, high);
         }
     }
 
-    private int partition(int[] array, int low, int high) {
+    private int partition(int low, int high) {
         int pivot = array[high];
 
         int i = low - 1;
