@@ -3,7 +3,7 @@ package algorithms;
 import java.util.Arrays;
 import algorithms.sort.MonothreadMergeSort;
 import algorithms.sort.MonothreadQuickSort;
-import algorithms.sort.MonothreadSelectionSort;
+// import algorithms.sort.MonothreadSelectionSort;
 import algorithms.sort.MultithreadMergeSort;
 import algorithms.sort.MultithreadQuickSort;
 
@@ -29,7 +29,7 @@ public class Main {
         int[] array_5 = Utils.copyArray(array_1);
 
         if (Constants.LOGS && Constants.TOTAL_LOGS) {
-            System.out.println(Arrays.toString(array_1));
+            // System.out.println(Arrays.toString(array_1));
             System.out.println(Arrays.toString(array_2));
             System.out.println(Arrays.toString(array_3));
             System.out.println(Arrays.toString(array_4));
@@ -38,13 +38,14 @@ public class Main {
 
         // selection sort
 
-        MonothreadSelectionSort monothreadSelectionSort = new MonothreadSelectionSort(array_1);
+        // MonothreadSelectionSort monothreadSelectionSort = new
+        // MonothreadSelectionSort(array_1);
 
-        long start_1 = Utils.getCurrentUnixTime();
+        // long start_1 = Utils.getCurrentUnixTime();
 
-        monothreadSelectionSort.sort();
+        // monothreadSelectionSort.sort();
 
-        long elapsed_1 = Utils.getCurrentUnixTime() - start_1;
+        // long elapsed_1 = Utils.getCurrentUnixTime() - start_1;
 
         // merge sort
 
@@ -87,14 +88,14 @@ public class Main {
         long elapsed_5 = Utils.getCurrentUnixTime() - start_5;
 
         if (Constants.LOGS) {
-            System.out.printf("Selection sort execution time: %d ms\n", elapsed_1);
+            // System.out.printf("Selection sort execution time: %d ms\n", elapsed_1);
             System.out.printf("Merge sort execution time: %d ms\n", elapsed_2);
             System.out.printf("Quick sort execution time: %d ms\n", elapsed_3);
             System.out.printf("Multithread merge sort execution time: %d ms\n", elapsed_4);
             System.out.printf("Multithread quick sort execution time: %d ms\n", elapsed_5);
 
             if (Constants.TOTAL_LOGS) {
-                System.out.println(Arrays.toString(array_1));
+                // System.out.println(Arrays.toString(array_1));
                 System.out.println(Arrays.toString(array_2));
                 System.out.println(Arrays.toString(array_3));
                 System.out.println(Arrays.toString(array_4));
