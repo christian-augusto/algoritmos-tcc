@@ -20,7 +20,7 @@ public class Constants {
             array[0] = 8;
             array[1] = 16;
         } else {
-            array = new int[14];
+            array = new int[20];
             array[0] = 8;
             array[1] = 16;
             array[2] = 100;
@@ -35,6 +35,12 @@ public class Constants {
             array[11] = 750_000;
             array[12] = 1_000_000;
             array[13] = 5_000_000;
+            array[14] = 10_000_000;
+            array[15] = 25_000_000;
+            array[16] = 50_000_000;
+            array[17] = 100_000_000;
+            array[18] = 250_000_000;
+            array[19] = 500_000_000;
         }
 
         return array;
