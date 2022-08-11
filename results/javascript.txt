@@ -114,3 +114,13 @@ Merge sort execution time: 11833 ms
 Quick sort execution time: 3956 ms
 Multithread merge sort execution time: 11888 ms
 Multithread quick sort execution time: 13262 ms
+
+size: 100.000.000
+Merge sort execution time: 28244 ms
+Quick sort execution time: 8346 ms
+Multithread merge sort execution time: 28292 ms
+Multithread quick sort execution time: 26883 ms
+
+size: 250.000.000
+Fatal error in , line 0
+Fatal JavaScript invalid size error 169220804

@@ -4,7 +4,7 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "node main.js > log.log"
+    "start": "node --max-old-space-size=32768 main.js > log.log"
   },
   "engines": {
     "node": "16.15.1"
