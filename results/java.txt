@@ -99,3 +99,33 @@ Merge sort execution time: 561 ms
 Quick sort execution time: 328 ms
 Multithread merge sort execution time: 198 ms
 Multithread quick sort execution time: 219 ms
+
+size: 10.000.000
+Merge sort execution time: 1118 ms
+Quick sort execution time: 650 ms
+Multithread merge sort execution time: 390 ms
+Multithread quick sort execution time: 389 ms
+
+size: 25.000.000
+Merge sort execution time: 3168 ms
+Quick sort execution time: 1720 ms
+Multithread merge sort execution time: 1024 ms
+Multithread quick sort execution time: 891 ms
+
+size: 50.000.000
+Merge sort execution time: 6212 ms
+Quick sort execution time: 3518 ms
+Multithread merge sort execution time: 2158 ms
+Multithread quick sort execution time: 2458 ms
+
+size: 100.000.000
+Merge sort execution time: 12895 ms
+Quick sort execution time: 7240 ms
+Multithread merge sort execution time: 4288 ms
+Multithread quick sort execution time: 4763 ms
+
+size: 250.000.000
+Merge sort execution time: 34269 ms
+Quick sort execution time: 19385 ms
+Multithread merge sort execution time: 12200 ms
+Multithread quick sort execution time: 11173 ms
