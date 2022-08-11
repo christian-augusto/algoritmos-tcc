@@ -126,9 +126,3 @@ Merge sort execution time: 35809 ms
 Quick sort execution time: 18996 ms
 Multithread merge sort execution time: 11568 ms
 Multithread quick sort execution time: 11145 ms
-
-size: 500.000.000
-Merge sort execution time: 101593 ms
-Quick sort execution time: 51220 ms
-Multithread merge sort execution time: 39056 ms
-Multithread quick sort execution time: 35393 ms
