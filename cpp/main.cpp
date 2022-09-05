@@ -5,6 +5,7 @@
 #include "./utils/utils.cpp"
 #include "./monothread_sort/selection_sort.cpp"
 #include "./monothread_sort/merge_sort.cpp"
+#include "./monothread_sort/quick_sort.cpp"
 
 using namespace std;
 using namespace constants;
@@ -52,6 +53,10 @@ void sort(int size)
   // merge sort
 
   merge_sort::sort(array_2);
+
+  // quick sort
+
+  quick_sort::sort(array_3);
 
   if (LOGS)
   {
