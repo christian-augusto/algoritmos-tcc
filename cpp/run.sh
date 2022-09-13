@@ -1,1 +1,1 @@
-g++ -pthread main.cpp -o main && ./main
+g++ -pthread main.cpp -o main && ./main > log.log
