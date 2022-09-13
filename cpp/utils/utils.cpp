@@ -42,8 +42,8 @@ namespace utils
     return array_2;
   }
 
-  long get_current_unix_time_milliseconds()
+  steady_clock::time_point get_current_unix_time_milliseconds()
   {
-    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+    return steady_clock::now();
   }
 }

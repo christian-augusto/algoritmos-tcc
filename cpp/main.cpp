@@ -12,6 +12,7 @@
 
 using namespace std;
 using namespace constants;
+using namespace std::chrono;
 
 void sort(int arraySize);
 void separator();
@@ -51,43 +52,53 @@ void sort(int arraySize)
 
   // selection sort
 
-  const long start_1 = utils::get_current_unix_time_milliseconds();
+  const steady_clock::time_point start_1 = utils::get_current_unix_time_milliseconds();
 
   selection_sort::sort(array_1);
 
-  const long elapsed_1 = utils::get_current_unix_time_milliseconds() - start_1;
+  const steady_clock::time_point end_1 = utils::get_current_unix_time_milliseconds();
+
+  const long elapsed_1 = duration_cast<milliseconds>(end_1 - start_1).count();
 
   // merge sort
 
-  const long start_2 = utils::get_current_unix_time_milliseconds();
+  const steady_clock::time_point start_2 = utils::get_current_unix_time_milliseconds();
 
   merge_sort::sort(array_2);
 
-  const long elapsed_2 = utils::get_current_unix_time_milliseconds() - start_2;
+  const steady_clock::time_point end_2 = utils::get_current_unix_time_milliseconds();
+
+  const long elapsed_2 = duration_cast<milliseconds>(end_2 - start_2).count();
 
   // quick sort
 
-  const long start_3 = utils::get_current_unix_time_milliseconds();
+  const steady_clock::time_point start_3 = utils::get_current_unix_time_milliseconds();
 
   quick_sort::sort(array_3);
 
-  const long elapsed_3 = utils::get_current_unix_time_milliseconds() - start_3;
+  const steady_clock::time_point end_3 = utils::get_current_unix_time_milliseconds();
+
+  const long elapsed_3 = duration_cast<milliseconds>(end_3 - start_3).count();
 
   // multithread merge sort
 
-  const long start_4 = utils::get_current_unix_time_milliseconds();
+  const steady_clock::time_point start_4 = utils::get_current_unix_time_milliseconds();
 
   multithread_merge_sort::sort(array_4);
 
-  const long elapsed_4 = utils::get_current_unix_time_milliseconds() - start_4;
+  const steady_clock::time_point end_4 = utils::get_current_unix_time_milliseconds();
+
+  const long elapsed_4 = duration_cast<milliseconds>(end_4 - start_4).count();
 
   // multithread merge sort
 
-  const long start_5 = utils::get_current_unix_time_milliseconds();
+  const steady_clock::time_point start_5 = utils::get_current_unix_time_milliseconds();
 
   multithread_quick_sort::sort(array_5);
 
-  const long elapsed_5 = utils::get_current_unix_time_milliseconds() - start_5;
+  const steady_clock::time_point end_5 = utils::get_current_unix_time_milliseconds();
+
+  const long elapsed_5 = duration_cast<milliseconds>(end_5 - start_5).count();
 
   if (LOGS)
   {

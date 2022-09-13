@@ -1,0 +1,122 @@
+arraySize: 8
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+arraySize: 16
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+arraySize: 100
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+arraySize: 1.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 0 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 0 ms
+Multithread quick sort execution time: 0 ms
+
+arraySize: 10.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 3 ms
+Quick sort execution time: 0 ms
+Multithread merge sort execution time: 2 ms
+Multithread quick sort execution time: 0 ms
+
+arraySize: 25.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 8 ms
+Quick sort execution time: 1 ms
+Multithread merge sort execution time: 3 ms
+Multithread quick sort execution time: 2 ms
+
+arraySize: 50.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 15 ms
+Quick sort execution time: 3 ms
+Multithread merge sort execution time: 5 ms
+Multithread quick sort execution time: 3 ms
+
+arraySize: 75.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 24 ms
+Quick sort execution time: 3 ms
+Multithread merge sort execution time: 10 ms
+Multithread quick sort execution time: 3 ms
+
+arraySize: 100.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 32 ms
+Quick sort execution time: 5 ms
+Multithread merge sort execution time: 10 ms
+Multithread quick sort execution time: 5 ms
+
+arraySize: 250.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 77 ms
+Quick sort execution time: 12 ms
+Multithread merge sort execution time: 23 ms
+Multithread quick sort execution time: 8 ms
+
+arraySize: 500.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 157 ms
+Quick sort execution time: 23 ms
+Multithread merge sort execution time: 49 ms
+Multithread quick sort execution time: 19 ms
+
+arraySize: 750.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 249 ms
+Quick sort execution time: 37 ms
+Multithread merge sort execution time: 83 ms
+Multithread quick sort execution time: 27 ms
+
+arraySize: 1.000.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 310 ms
+Quick sort execution time: 50 ms
+Multithread merge sort execution time: 91 ms
+Multithread quick sort execution time: 40 ms
+
+arraySize: 5.000.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 1749 ms
+Quick sort execution time: 401 ms
+Multithread merge sort execution time: 489 ms
+Multithread quick sort execution time: 272 ms
+
+arraySize: 10.000.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 3723 ms
+Quick sort execution time: 1162 ms
+Multithread merge sort execution time: 1310 ms
+Multithread quick sort execution time: 787 ms
+
+arraySize: 25.000.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 10728 ms
+Quick sort execution time: 5594 ms
+Multithread merge sort execution time: 5795 ms
+Multithread quick sort execution time: 4599 ms
+
+arraySize: 50.000.000
+Selection sort execution time: 0 ms
+Merge sort execution time: 30985 ms
+Quick sort execution time: 20423 ms
+Multithread merge sort execution time: 26085 ms
+Multithread quick sort execution time: 18669 ms
+
+arraySize: 100.000.000
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
