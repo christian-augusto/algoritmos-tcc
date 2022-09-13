@@ -4,6 +4,8 @@ import "algoritmos-tcc-golang/utils"
 
 const DEBUG = true
 const LOGS = true
+const THREADS_NUMBER = 4
+const RANDOM_INT_MIN = 0
 const TOTAL_LOGS = DEBUG
 
 var ARRAY_SIZES = utils.IfThenElse(
@@ -12,10 +14,6 @@ var ARRAY_SIZES = utils.IfThenElse(
 		10_000_000, 25_000_000, 50_000_000, 100_000_000, 250_000_000,
 	},
 ).([]int)
-
-const THREADS_NUMBER = 4
-
-const RANDOM_INT_MIN = 0
 
 var RANDOM_INT_MAX = utils.IfThenElse(
 	DEBUG, 100, 2_000_000_000,

@@ -23,7 +23,7 @@ async function sort(size) {
   const array_5 = utils.copyArray(array_1);
 
   if (LOGS && TOTAL_LOGS) {
-    // console.log(array_1);
+    console.log(array_1);
     console.log(array_2);
     console.log(array_3);
     console.log(array_4);
@@ -32,11 +32,11 @@ async function sort(size) {
 
   // selection sort
 
-  // const start_1 = new Date();
+  const start_1 = new Date();
 
-  // monothreadSort.selectionSort.sort(array_1);
+  monothreadSort.selectionSort.sort(array_1);
 
-  // const elapsed_1 = utils.timeElapsedSinceMiliSeconds(start_1);
+  const elapsed_1 = utils.timeElapsedSinceMiliSeconds(start_1);
 
   // merge sort
 
@@ -71,14 +71,14 @@ async function sort(size) {
   const elapsed_5 = utils.timeElapsedSinceMiliSeconds(start_5);
 
   if (LOGS) {
-    // console.log(`Selection sort execution time: ${elapsed_1} ms`);
+    console.log(`Selection sort execution time: ${elapsed_1} ms`);
     console.log(`Merge sort execution time: ${elapsed_2} ms`);
     console.log(`Quick sort execution time: ${elapsed_3} ms`);
     console.log(`Multithread merge sort execution time: ${elapsed_4} ms`);
     console.log(`Multithread quick sort execution time: ${elapsed_5} ms`);
 
     if (TOTAL_LOGS) {
-      // console.log(array_1);
+      console.log(array_1);
       console.log(array_2);
       console.log(array_3);
       console.log(array_4);

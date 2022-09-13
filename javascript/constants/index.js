@@ -1,5 +1,7 @@
 const DEBUG = true;
 const LOGS = true;
+const THREADS_NUMBER = 4;
+const RANDOM_INT_MIN = 0;
 const TOTAL_LOGS = DEBUG;
 const ARRAY_SIZES = DEBUG
   ? [8, 16]
@@ -7,8 +9,6 @@ const ARRAY_SIZES = DEBUG
       8, 16, 100, 1_000, 10_000, 25_000, 50_000, 75_000, 100_000, 250_000, 500_000, 750_000, 1_000_000, 5_000_000,
       10_000_000, 25_000_000, 50_000_000, 100_000_000, 250_000_000,
     ];
-const THREADS_NUMBER = 4;
-const RANDOM_INT_MIN = 0;
 const RANDOM_INT_MAX = DEBUG ? 100 : 2_000_000_000;
 
 module.exports = {

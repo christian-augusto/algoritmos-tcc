@@ -1,6 +1,7 @@
 namespace utils
 {
   using namespace std;
+  using namespace std::chrono;
 
   void show_array(vector<int> *array)
   {
@@ -40,5 +41,10 @@ namespace utils
     }
 
     return array_2;
+  }
+
+  long get_current_unix_time_milliseconds()
+  {
+    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
   }
 }

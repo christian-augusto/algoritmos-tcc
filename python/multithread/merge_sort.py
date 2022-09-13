@@ -4,8 +4,8 @@ import threading
 
 class MergeSort:
     def sort(self, array: list):
-        threads = []
         arrayLen = len(array)
+        threads = []
 
         for i in range(0, THREADS_NUMBER):
             low = i * (arrayLen // 4)

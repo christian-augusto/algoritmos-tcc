@@ -6,10 +6,10 @@ package algorithms;
 public class Constants {
     public static boolean DEBUG = true;
     public static boolean LOGS = true;
-    public static boolean TOTAL_LOGS = DEBUG;
-    public static int[] ARRAY_SIZES = arraySizes();
     public static int THREADS_NUMBER = 4;
     public static int RANDOM_INT_MIN = 0;
+    public static boolean TOTAL_LOGS = DEBUG;
+    public static int[] ARRAY_SIZES = arraySizes();
     public static int RANDOM_INT_MAX = DEBUG ? 100 : 2_000_000_000;
 
     private static int[] arraySizes() {
