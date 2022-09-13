@@ -2,3 +2,5 @@
 .vscode
 cpp/.vscode
 cpp/main
+cpp/main.exe
+golang/main

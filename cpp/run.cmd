@@ -1,1 +1,1 @@
-g++ main.cpp -o main && ./main
+g++ -pthread main.cpp -o main.exe && main.exe
