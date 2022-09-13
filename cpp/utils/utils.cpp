@@ -15,7 +15,6 @@ namespace utils
 
   int random_int(int min, int max, unsigned someSeed)
   {
-    srand(((unsigned)time(0)) + someSeed);
     return rand() % max + min;
   }
 
