@@ -13,18 +13,18 @@
 using namespace std;
 using namespace constants;
 
-void sort(int size);
+void sort(int arraySize);
 void separator();
 
 int main()
 {
   for (int i = 0; i < ARRAY_SIZES_LENGTH; i++)
   {
-    int size = ARRAY_SIZES[i];
+    int arraySize = ARRAY_SIZES[i];
 
-    cout << "size: " << size << endl;
+    cout << "arraySize: " << arraySize << endl;
 
-    sort(size);
+    sort(arraySize);
 
     separator();
   }
@@ -32,9 +32,9 @@ int main()
   return 0;
 }
 
-void sort(int size)
+void sort(int arraySize)
 {
-  vector<int> *array_1 = utils::generate_random_array(size, RANDOM_INT_MIN, RANDOM_INT_MAX);
+  vector<int> *array_1 = utils::generate_random_array(arraySize, RANDOM_INT_MIN, RANDOM_INT_MAX);
   vector<int> *array_2 = utils::copy_array(array_1);
   vector<int> *array_3 = utils::copy_array(array_1);
   vector<int> *array_4 = utils::copy_array(array_1);
