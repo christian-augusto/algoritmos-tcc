@@ -118,5 +118,4 @@ Multithread merge sort execution time: 29143 ms
 Multithread quick sort execution time: 50299 ms
 
 arraySize: 100.000.000
-terminate called after throwing an instance of 'std::bad_alloc'
-  what():  std::bad_alloc
+terminate called after throwing an instance of 'std::bad_alloc' what(): std::bad_alloc
